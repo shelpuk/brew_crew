@@ -1,5 +1,6 @@
 import 'package:brew_crew/modules/brew.dart';
 import 'package:brew_crew/screens/home/brew_list.dart';
+import 'package:brew_crew/screens/home/settings_form.dart';
 import 'package:brew_crew/screens/services/auth.dart';
 import 'package:brew_crew/screens/services/database.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
@@ -22,7 +23,7 @@ class Home extends StatelessWidget {
                   vertical: 20,
                   horizontal: 60
               ),
-              child: Text('Bottom sheet'),
+              child: SettingsForm(),
 
             );
           }
@@ -49,7 +50,7 @@ class Home extends StatelessWidget {
                 ),
             ),
             TextButton.icon(
-                onPressed: () => _showSettingsPanel,
+                onPressed: () => _showSettingsPanel(),
                 icon: Icon(Icons.settings),
                 label: Text('Settings'),
                 style: ButtonStyle(
