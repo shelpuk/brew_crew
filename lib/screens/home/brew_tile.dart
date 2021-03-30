@@ -16,10 +16,11 @@ class BrewTile extends StatelessWidget {
         child: ListTile(
           leading: CircleAvatar(
             radius: 25,
+            backgroundImage: AssetImage('assets/coffee_mug.png'),
             backgroundColor: Colors.brown[brew.strength],
           ),
           title: Text(brew.name),
-          subtitle: Text('Takes ${brew.sugar} sugar'),
+          subtitle: Text('Takes ${brew.sugar} sugar(s)'),
         ),
       ),
     );

@@ -3,10 +3,8 @@ import 'package:brew_crew/screens/home/brew_list.dart';
 import 'package:brew_crew/screens/home/settings_form.dart';
 import 'package:brew_crew/screens/services/auth.dart';
 import 'package:brew_crew/screens/services/database.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:typed_data/typed_buffers.dart';
 
 class Home extends StatelessWidget {
   final AuthService _auth = AuthService();
@@ -24,13 +22,13 @@ class Home extends StatelessWidget {
                   horizontal: 60
               ),
               child: SettingsForm(),
-
             );
           }
           );
     }
 
     return StreamProvider<List<Brew>>.value(
+      initialData: [],
       value: DatabaseService().brews,
       child: Scaffold(
         backgroundColor: Colors.brown[50],
@@ -57,10 +55,18 @@ class Home extends StatelessWidget {
                   foregroundColor: MaterialStateProperty.all<Color>(Colors.brown[900])
                 ),
             ),
-
           ]
         ),
-        body: BrewList(),
+        body: Container(
+          decoration: BoxDecoration(
+            image: DecorationImage(
+              image: AssetImage('assets/coffee_bg.png'),
+              fit: BoxFit.cover
+            )
+          ),
+
+          child: BrewList()
+        ),
       ),
     );
   }
