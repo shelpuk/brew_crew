@@ -1,16 +1,17 @@
-# brew_crew
+# Brew Crew
 
-A new Flutter application.
+Flutter 2 implementation of Brew Crew app by awesome @iamshaunjp. It keeps track of the coffee preferences of your entire team so that anyone can serve all your teammates need :)
 
-## Getting Started
+The app uses Firebase for user management and database service.
 
-This project is a starting point for a Flutter application.
+Go log in or register.
 
-A few resources to get you started if this is your first Flutter project:
+![Log in or register](https://github.com/shelpuk/brew_crew/blob/master/screenshots/Screenshot_20210330_182227.png)
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+Submit your coffee preferences.
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![Manage preferences](https://github.com/shelpuk/brew_crew/blob/master/screenshots/Screenshot_20210330_182240.png)
+
+And never forget the favorite brew of your teammate anymore :)
+
+![The main screen](https://github.com/shelpuk/brew_crew/blob/master/screenshots/Screenshot_20210330_182240.png)
